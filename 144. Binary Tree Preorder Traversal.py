@@ -11,18 +11,18 @@ class TreeNode:
 
 class Solution:
     # recursive solution
-#     def preorder(self, root, res):
-#         if root:
-#             res.append(root.val)
-#             self.preorder(root.left, res)
-#             self.preorder(root.right, res)
+    def preorder(self, root, res):
+        if root:
+            res.append(root.val)
+            self.preorder(root.left, res)
+            self.preorder(root.right, res)
             
-#     def preorderTraversal(self, root: TreeNode) -> List[int]:
-#         res = []
-#         self.preorder(root, res)
-#         return res
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        res = []
+        self.preorder(root, res)
+        return res
     
-    #iterative solution
+    # iterative solution
     def preorderTraversal(self, root: TreeNode) -> List[int]:
         stack, res = [root], []
         while stack:
@@ -32,5 +32,4 @@ class Solution:
                 stack.append(node.right)
                 stack.append(node.left)
         
-        return res
-            
+        return res   
