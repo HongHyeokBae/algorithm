@@ -17,13 +17,13 @@ class Solution:
             self.preorder(root.left, res)
             self.preorder(root.right, res)
             
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
+    def preorderTraversal(self, root: TreeNode):
         res = []
         self.preorder(root, res)
         return res
     
     # iterative solution
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
+    def preorderTraversal_sol2(self, root: TreeNode):
         stack, res = [root], []
         while stack:
             node = stack.pop()

@@ -18,14 +18,14 @@ class Solution:
             self.inorder(root.right, res)
             
         
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
+    def inorderTraversal(self, root: TreeNode):
         res = []
         self.inorder(root, res)
         
         return res
 
 #   iterative solution    
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
+    def inorderTraversal_sol2(self, root: TreeNode):
         s, res = [], []
         node = root
         while s or node:

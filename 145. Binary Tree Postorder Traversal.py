@@ -17,14 +17,14 @@ class Solution:
             self.postorder(root.right, res)
             res.append(root.val)
             
-    def postorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal(self, root: TreeNode):
         res = []
         self.postorder(root, res)
         return res
 
     # iterative solution 1
     # use flag to indicate whether node has been visited or not
-    def postorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal_sol2(self, root: TreeNode):
         res, stack = [], [(root, False)]
         while stack:
             node, visited = stack.pop()
@@ -40,7 +40,7 @@ class Solution:
 
     # iterative solution 2
     # result of postorder traversal is reverse of preorder
-    def postorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal_sol3(self, root: TreeNode):
         res, stack = [], [root]
         
         while stack:

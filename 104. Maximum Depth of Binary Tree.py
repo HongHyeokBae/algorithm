@@ -19,13 +19,13 @@ class Solution:
         self.maximum_depth(root.right, depth + 1)
     
     # top-down solution
-    def maxDepth_sol1(self, root: TreeNode) -> int:
+    def maxDepth_sol1(self, root: TreeNode):
         self.maximum_depth(root, 1)
         
         return self.res
     
     # bottom-up solution
-    def maxDepth_sol2(self, root: TreeNode) -> int:
+    def maxDepth_sol2(self, root: TreeNode):
         if not root:
             return 0
         else:
@@ -33,7 +33,7 @@ class Solution:
 
     # iterative solution
     # breadth-first search 
-    def maxDepth_sol3(self, root: TreeNode) -> int:
+    def maxDepth_sol3(self, root: TreeNode):
         if not root:
             return 0
         

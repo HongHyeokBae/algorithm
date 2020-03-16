@@ -34,7 +34,7 @@ class Solution:
         res.append(level_res)
         return res
 
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def levelOrder_sol2(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []
         res, level = [], [root]
