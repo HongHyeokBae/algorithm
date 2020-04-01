@@ -29,6 +29,9 @@ class Solution:
             self.pathSum(root.left, pathSum, sum)
             self.pathSum(root.right, pathSum, sum)
 
+    # short recursive solution
+    # subtract current the value of current node until it reaches a leaf node
+    # and the subtraction equals 0
     def hasPathSum_sol2(self, root: TreeNode, sum: int):
         if not root:
             return False
