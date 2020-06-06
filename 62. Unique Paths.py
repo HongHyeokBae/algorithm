@@ -17,10 +17,5 @@ class Solution:
         for i in range(1, n):
             for j in range(1, m):
                 paths[i][j] = paths[i-1][j] + paths[i][j-1]
-                self.printArr(paths, n)
-                print()
         
         return paths[-1][-1]
-    def printArr(self, arr, n):
-        for i in range(n):
-            print(arr[i])
