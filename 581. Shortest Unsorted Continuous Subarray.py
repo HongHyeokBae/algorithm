@@ -1,7 +1,11 @@
 
 
 class Solution:
-    def findUnsortedSubarray(self, nums: List[int]) -> int:
+    def findUnsortedSubarray(self, nums):
+        """
+        type nums: List[int]
+        rtype: int
+        """
         min_, max_ = float('inf'), float('-inf')
         
         flag = False
